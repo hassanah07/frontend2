@@ -1,9 +1,9 @@
 export const nav = [
-  // {
-  //   id: "navapi1",
-  //   name: "latest",
-  //   link: "/latest",
-  // },
+  {
+    id: "navapi1",
+    name: "Home",
+    link: "/"
+  },
 
   // {
   //   id: "navapi1",
@@ -13,7 +13,7 @@ export const nav = [
   {
     id: "navapi2",
     name: "health",
-    link: "/health",
+    link: "/health"
   },
   // {
   //   id: "navapi3",
@@ -23,7 +23,7 @@ export const nav = [
   {
     id: "navapi4",
     name: "jobs",
-    link: "/career",
+    link: "/career"
   },
   // {
   //   id: "navapi5",
@@ -33,16 +33,16 @@ export const nav = [
   {
     id: "navapi6",
     name: "drugs",
-    link: "/medicine",
+    link: "/medicine"
   },
   {
     id: "navapi7",
     name: "contact",
-    link: "/contact",
+    link: "/contact"
   },
   {
     id: "navapi8",
     name: "login",
-    link: "/login",
-  },
+    link: "/login"
+  }
 ];

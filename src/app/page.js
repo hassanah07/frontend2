@@ -4,6 +4,8 @@ import Strip from "./components/Strip";
 
 export const metadata = {
   title: "Home",
+  description:
+    "Get latest Job Information, Health Tips, MedicaL Advices And many more at one Place"
 };
 
 const Page = async () => {
