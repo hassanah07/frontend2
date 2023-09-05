@@ -4,7 +4,7 @@ import BlogCombine from "../components/BlogCombine";
 export const metadata = {
   title: "Education & Colleges",
   description:
-    "Welcome to guide Wale, Your Path to Educational Excellence. Explore our insightful education blog, dedicated to providing valuable resources for your academic journey. From study tips and career insights to educational technology trends, our concise posts empower you to make informed decisions. Join us in shaping a successful learning experience and achieving your academic and career aspirations.",
+    "Welcome to guide Wale, Your Path to Educational Excellence. Explore our insightful education blog, dedicated to providing valuable resources for your academic journey. From study tips and career insights to educational technology trends, our concise posts empower you to make informed decisions. Join us in shaping a successful learning experience and achieving your academic and career aspirations."
 };
 
 const Page = async ({ searchParams }) => {
@@ -17,14 +17,14 @@ const Page = async ({ searchParams }) => {
   }
   // console.log(currentPage);
   // let offset = (currentPage - 1) * dataLimit;
-  const url = `${process.env.NEXT_PUBLIC_HOST}/api/blogpost/education?currentpage=$
+  const url = `${process.env.NEXT_PUBLIC_HOST_SSR}/api/blogpost/education?currentpage=$
   {currentPage}&datalimit=${dataLimit}`;
   const response = await fetch(url, {
     cache: "no-cache",
     method: "GET",
     headers: {
-      "Content-Type": "application/json",
-    },
+      "Content-Type": "application/json"
+    }
   });
   const data = await response.json();
   const blogs = data.blogposts;

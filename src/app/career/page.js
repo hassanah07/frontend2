@@ -4,7 +4,7 @@ import BlogCombine from "../components/BlogCombine";
 export const metadata = {
   title: "Jobs and Career",
   description:
-    "Welcome to Guide Wale Jobs: Your Gateway to Professional Opportunities. Explore our jobs-related blog, offering invaluable insights into job search strategies, resume building, interview preparation, and more. Our concise posts provide a roadmap for navigating the competitive job market, ensuring you are equipped with the tools to secure your dream career. Join us in unlocking your potential and achieving career success.",
+    "Welcome to Guide Wale Jobs: Your Gateway to Professional Opportunities. Explore our jobs-related blog, offering invaluable insights into job search strategies, resume building, interview preparation, and more. Our concise posts provide a roadmap for navigating the competitive job market, ensuring you are equipped with the tools to secure your dream career. Join us in unlocking your potential and achieving career success."
 };
 
 const Page = async ({ searchParams }) => {
@@ -17,13 +17,13 @@ const Page = async ({ searchParams }) => {
   }
   // console.log(currentPage);
   // let offset = (currentPage - 1) * dataLimit;
-  const url = `${process.env.NEXT_PUBLIC_HOST}/api/blogpost/view?currentpage=${currentPage}&datalimit=${dataLimit}`;
+  const url = `${process.env.NEXT_PUBLIC_HOST_SSR}/api/blogpost/view?currentpage=${currentPage}&datalimit=${dataLimit}`;
   const response = await fetch(url, {
     cache: "no-cache",
     method: "GET",
     headers: {
-      "Content-Type": "application/json",
-    },
+      "Content-Type": "application/json"
+    }
   });
   const data = await response.json();
   const blogs = data.blogposts;

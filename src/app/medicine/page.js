@@ -4,7 +4,7 @@ import BlogCombine from "../components/BlogCombine";
 export const metadata = {
   title: "Drugs And Medications",
   description:
-    "Welcome to Guide Wale News Stay Informed, Stay Ahead. Delve into our news blog, your source for timely updates on industry trends, job markets, and career development. Our concise posts offer a fresh perspective on the ever-evolving world of professions. Stay ahead in your career journey with our insightful content, designed to inform and inspire your path to success.",
+    "Welcome to Guide Wale News Stay Informed, Stay Ahead. Delve into our news blog, your source for timely updates on industry trends, job markets, and career development. Our concise posts offer a fresh perspective on the ever-evolving world of professions. Stay ahead in your career journey with our insightful content, designed to inform and inspire your path to success."
 };
 
 const Page = async ({ searchParams }) => {
@@ -17,13 +17,13 @@ const Page = async ({ searchParams }) => {
   }
   // console.log(currentPage);
   // let offset = (currentPage - 1) * dataLimit;
-  const url = `${process.env.NEXT_PUBLIC_HOST}/api/blogpost/medicine?currentpage=${currentPage}&datalimit=${dataLimit}`;
+  const url = `${process.env.NEXT_PUBLIC_HOST_SSR}/api/blogpost/medicine?currentpage=${currentPage}&datalimit=${dataLimit}`;
   const response = await fetch(url, {
     cache: "no-cache",
     method: "GET",
     headers: {
-      "Content-Type": "application/json",
-    },
+      "Content-Type": "application/json"
+    }
   });
   const data = await response.json();
   const blogs = data.blogposts;

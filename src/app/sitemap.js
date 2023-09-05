@@ -1,7 +1,7 @@
 export default async function sitemap() {
   const baseUrl = process.env.FRONTEND_LINK;
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_HOST}/api/blogpost/sitemap`,
+    `${process.env.NEXT_PUBLIC_HOST_SSR}/api/blogpost/sitemap`,
     {
       cache: "no-cache",
       method: "GET",
@@ -12,9 +12,7 @@ export default async function sitemap() {
   );
 
   const data = await response.json();
-  setTimeout(() => {
-    data;
-  }, 1000);
+
   const postUrls = Object.keys(data).map((item) => ({
     url: `${baseUrl}/blog/${data[item].slug}`,
     lastModified: data[item].updatedAt

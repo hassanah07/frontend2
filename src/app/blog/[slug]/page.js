@@ -4,14 +4,14 @@ import React from "react";
 export async function generateMetadata({ params }, parent) {
   const id = params.id;
   const data = await fetch(
-    `${process.env.NEXT_PUBLIC_HOST}/api/blogpost/slugview`,
+    `${process.env.NEXT_PUBLIC_HOST_SSR}/api/blogpost/slugview`,
     {
       cache: "no-cache",
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify({ slug: params.slug }),
+      body: JSON.stringify({ slug: params.slug })
     }
   );
   const blogPost = await data.json();
@@ -20,24 +20,24 @@ export async function generateMetadata({ params }, parent) {
     title: blogPost.title,
     description: blogPost.desc,
     alternates: {
-      canonical: `${process.env.FRONTEND_LINK}/blog/${blogPost.slug}`,
+      canonical: `${process.env.FRONTEND_LINK}/blog/${blogPost.slug}`
       // languages: {
       //   "en-US": `${process.env.FRONTEND_LINK}/en-US/blog/${blogPost.slug}`,
       // },
-    },
+    }
   };
 }
 
 const Page = async ({ params }) => {
   const data = await fetch(
-    `${process.env.NEXT_PUBLIC_HOST}/api/blogpost/slugview`,
+    `${process.env.NEXT_PUBLIC_HOST_SSR}/api/blogpost/slugview`,
     {
       cache: "no-cache",
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify({ slug: params.slug }),
+      body: JSON.stringify({ slug: params.slug })
     }
   );
   const blogPost = await data.json();
