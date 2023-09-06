@@ -4,6 +4,11 @@ export const nav = [
     name: "Home",
     link: "/"
   },
+  {
+    id: "navapi4",
+    name: "jobs",
+    link: "/career"
+  },
 
   // {
   //   id: "navapi1",
@@ -20,11 +25,7 @@ export const nav = [
   //   name: "education",
   //   link: "/education",
   // },
-  {
-    id: "navapi4",
-    name: "jobs",
-    link: "/career"
-  },
+
   // {
   //   id: "navapi5",
   //   name: "sports",

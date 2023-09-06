@@ -67,7 +67,7 @@ const Page = async ({ params }) => {
         </div>
         <div className="flex flex-row justify-center items-center">
           <p className="font-extrabold capitalize dark:bg-slate-500 text-slate-500 dark:text-slate-100 bg-gray-200 text-center m-2 p-2 w-[100%] md:w-[50%] rounded-xl">
-            Author: {blogPost.author}
+            Verified By: Admin
           </p>
         </div>
       </div>

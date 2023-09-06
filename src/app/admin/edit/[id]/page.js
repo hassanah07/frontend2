@@ -108,11 +108,8 @@ const Page = ({ params }) => {
         body: JSON.stringify()
       }
     );
-    const data = await logResponse.json();
-    if (data.msg != true) {
-      localStorage.removeItem("token");
-      router.push("/login");
-    }
+    const userdata = await logResponse.json();
+    console.log(userdata);
   };
 
   const handleChange = (e) => {

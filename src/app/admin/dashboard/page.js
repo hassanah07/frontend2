@@ -217,7 +217,7 @@ const Page = () => {
                 </div>
               </div>
               {/* revenue generated */}
-              <div className="grid md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-3 xl:grid-flow-col gap-6 h-full relative">
+              {/* <div className="grid md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-3 xl:grid-flow-col gap-6 h-full relative">
                 <div className="flex flex-col md:col-span-2 md:row-span-2 bg-white dark:bg-black shadow rounded-lg">
                   <div className="px-6 py-5 font-semibold border-b border-gray-100">
                     Revenue Generated
@@ -238,7 +238,7 @@ const Page = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
