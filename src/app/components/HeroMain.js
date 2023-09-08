@@ -5,10 +5,10 @@ const HeroMain = () => {
   return (
     <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
       <h1 className="sm:text-3xl text-2xl title-font mb-2 text-pink-900 capitalize font-extrabold dark:text-slate-300">
-        Guide Wale
+        GuideWale
       </h1>
       <div className="lg:w-1/2 w-full leading-relaxed text-gray-500 text-justify capitalize dark:text-slate-300">
-        Guide Wale is not only a Income share Blog Writing Platform but It is
+        GuideWale is not only a Income share Blog Writing Platform but It is
         also a Hive of Programmers. We are a Team of Programmers and We are
         always ready to work on your upcoming Web based Project
       </div>

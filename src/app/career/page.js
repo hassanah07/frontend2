@@ -4,7 +4,7 @@ import BlogCombine from "../components/BlogCombine";
 export const metadata = {
   title: "Jobs and Career",
   description:
-    "Welcome to Guide Wale Jobs: Your Gateway to Professional Opportunities. Explore our jobs-related blog, offering invaluable insights into job search strategies, resume building, interview preparation, and more. Our concise posts provide a roadmap for navigating the competitive job market, ensuring you are equipped with the tools to secure your dream career. Join us in unlocking your potential and achieving career success."
+    "Welcome to GuideWale Jobs: Your Gateway to Professional Opportunities. Explore our jobs-related blog, offering invaluable insights into job search strategies, resume building, interview preparation, and more. Our concise posts provide a roadmap for navigating the competitive job market, ensuring you are equipped with the tools to secure your dream career. Join us in unlocking your potential and achieving career success."
 };
 
 const Page = async ({ searchParams }) => {

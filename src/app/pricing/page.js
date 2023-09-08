@@ -7,7 +7,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Our Pricing",
   description:
-    "Welcome to Guide Wale, The new way to get your website ready at a very low price and high quality and ultra fast and secure design and development. Get a Specific Developer Assigned for your project specially and enjoy a tension free experience"
+    "Welcome to GuideWale, The new way to get your website ready at a very low price and high quality and ultra fast and secure design and development. Get a Specific Developer Assigned for your project specially and enjoy a tension free experience"
 };
 
 const Page = () => {

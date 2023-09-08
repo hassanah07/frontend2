@@ -4,7 +4,7 @@ import BlogCombine from "../components/BlogCombine";
 export const metadata = {
   title: "Sports",
   description:
-    "Welcome to Guide Wale, Your Path to Success in Sports. Dive into our insightful sports blog, dedicated to guiding you towards a rewarding career in the sports industry. From in-depth profiles of successful sports professionals to expert tips on landing your dream job, we cover every aspect of your journey. Explore strategies for sports management, coaching, marketing, and more, all backed by real-world experiences and advice. Whether you are a passionate enthusiast or a budding professional, our concise and engaging posts will equip you with the knowledge and inspiration to excel in the dynamic world of sports careers."
+    "Welcome to GuideWale, Your Path to Success in Sports. Dive into our insightful sports blog, dedicated to guiding you towards a rewarding career in the sports industry. From in-depth profiles of successful sports professionals to expert tips on landing your dream job, we cover every aspect of your journey. Explore strategies for sports management, coaching, marketing, and more, all backed by real-world experiences and advice. Whether you are a passionate enthusiast or a budding professional, our concise and engaging posts will equip you with the knowledge and inspiration to excel in the dynamic world of sports careers."
 };
 const Page = async ({ searchParams }) => {
   const dataLimit = 6;

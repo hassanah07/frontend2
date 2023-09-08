@@ -4,7 +4,7 @@ import BlogCombine from "../components/BlogCombine";
 export const metadata = {
   title: "Health",
   description:
-    "Welcome to Guide Wale Navigating Health Professions. Embark on a journey of wellness with our enlightening health blog. Discover comprehensive insights into diverse health careers, from nursing and medical research to holistic practices. Explore expert advice on educational paths, skill development, and industry trends, empowering you to make informed career choices. Whether you are a medical aspirant or transitioning into the health sector, our concise posts offer valuable guidance. With real-life stories and practical tips, we're your compass for navigating the vast terrain of health professions. Let us be your partner in sculpting a successful and fulfilling career in the world of health."
+    "Welcome to GuideWale Navigating Health Professions. Embark on a journey of wellness with our enlightening health blog. Discover comprehensive insights into diverse health careers, from nursing and medical research to holistic practices. Explore expert advice on educational paths, skill development, and industry trends, empowering you to make informed career choices. Whether you are a medical aspirant or transitioning into the health sector, our concise posts offer valuable guidance. With real-life stories and practical tips, we're your compass for navigating the vast terrain of health professions. Let us be your partner in sculpting a successful and fulfilling career in the world of health."
 };
 
 const Page = async ({ searchParams }) => {

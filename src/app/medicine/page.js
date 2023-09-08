@@ -4,7 +4,7 @@ import BlogCombine from "../components/BlogCombine";
 export const metadata = {
   title: "Drugs And Medications",
   description:
-    "Welcome to Guide Wale News Stay Informed, Stay Ahead. Delve into our news blog, your source for timely updates on industry trends, job markets, and career development. Our concise posts offer a fresh perspective on the ever-evolving world of professions. Stay ahead in your career journey with our insightful content, designed to inform and inspire your path to success."
+    "Welcome to GuideWale News Stay Informed, Stay Ahead. Delve into our news blog, your source for timely updates on industry trends, job markets, and career development. Our concise posts offer a fresh perspective on the ever-evolving world of professions. Stay ahead in your career journey with our insightful content, designed to inform and inspire your path to success."
 };
 
 const Page = async ({ searchParams }) => {

@@ -4,7 +4,7 @@ import BlogCombine from "../components/BlogCombine";
 export const metadata = {
   title: "Education & Colleges",
   description:
-    "Welcome to guide Wale, Your Path to Educational Excellence. Explore our insightful education blog, dedicated to providing valuable resources for your academic journey. From study tips and career insights to educational technology trends, our concise posts empower you to make informed decisions. Join us in shaping a successful learning experience and achieving your academic and career aspirations."
+    "Welcome to guideWale, Your Path to Educational Excellence. Explore our insightful education blog, dedicated to providing valuable resources for your academic journey. From study tips and career insights to educational technology trends, our concise posts empower you to make informed decisions. Join us in shaping a successful learning experience and achieving your academic and career aspirations."
 };
 
 const Page = async ({ searchParams }) => {
