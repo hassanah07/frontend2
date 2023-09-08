@@ -6,7 +6,7 @@ export async function generateMetadata({ params }, parent) {
   const data = await fetch(
     `${process.env.NEXT_PUBLIC_HOST_SSR}/api/blogpost/slugview`,
     {
-      cache: "no-cache",
+      // cache: "no-cache",
       method: "POST",
       headers: {
         "Content-Type": "application/json"

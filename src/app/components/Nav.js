@@ -41,7 +41,7 @@ const Navigation = () => {
                 />
               </span>
               <span className="font-extrabold text-pink-600 text-2xl mt-1 uppercase shadow-2xl">
-                Guide Wale
+                GuideWale
               </span>
             </Link>
           </nav>
@@ -109,7 +109,7 @@ const Navigation = () => {
                 />
               </span>
               <span className="font-extrabold text-pink-600 text-2xl mt-1 uppercase shadow-2xl">
-                Guide Wale
+                GuideWale
               </span>
             </Link>
           </nav>

@@ -3,7 +3,7 @@ import Hero from "./components/Hero";
 import Strip from "./components/Strip";
 
 export const metadata = {
-  title: "Home",
+  title: "GuideWale | Home",
   description:
     "Get latest Job Information, Health Tips, MedicaL Advices And many more at one Place"
 };

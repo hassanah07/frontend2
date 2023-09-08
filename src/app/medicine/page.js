@@ -19,7 +19,7 @@ const Page = async ({ searchParams }) => {
   // let offset = (currentPage - 1) * dataLimit;
   const url = `${process.env.NEXT_PUBLIC_HOST_SSR}/api/blogpost/medicine?currentpage=${currentPage}&datalimit=${dataLimit}`;
   const response = await fetch(url, {
-    cache: "no-cache",
+    // cache: "no-cache",
     method: "GET",
     headers: {
       "Content-Type": "application/json"
