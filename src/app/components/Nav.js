@@ -40,7 +40,7 @@ const Navigation = () => {
                   height={30}
                 />
               </span>
-              <span className="font-extrabold text-pink-600 text-2xl mt-1 uppercase shadow-2xl">
+              <span className="font-extrabold text-pink-600 text-2xl mt-1 shadow-2xl">
                 GuideWale
               </span>
             </Link>
@@ -108,7 +108,7 @@ const Navigation = () => {
                   // style={{ width: auto, height: auto }}
                 />
               </span>
-              <span className="font-extrabold text-pink-600 text-2xl mt-1 uppercase shadow-2xl">
+              <span className="font-extrabold text-pink-600 text-2xl mt-1 shadow-2xl">
                 GuideWale
               </span>
             </Link>
