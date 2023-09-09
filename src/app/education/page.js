@@ -20,7 +20,7 @@ const Page = async ({ searchParams }) => {
   const url = `${process.env.NEXT_PUBLIC_HOST_SSR}/api/blogpost/education?currentpage=$
   {currentPage}&datalimit=${dataLimit}`;
   const response = await fetch(url, {
-    // cache: "no-cache",
+    cache: "no-cache",
     method: "GET",
     headers: {
       "Content-Type": "application/json"
