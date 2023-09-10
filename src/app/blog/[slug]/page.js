@@ -19,6 +19,7 @@ export async function generateMetadata({ params }, parent) {
   return {
     title: blogPost.title,
     description: blogPost.desc,
+    metadataBase: new URL(`${process.env.FRONTEND_LINK}`),
     alternates: {
       canonical: `${process.env.FRONTEND_LINK}/blog/${blogPost.slug}`
       // languages: {

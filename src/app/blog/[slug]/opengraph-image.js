@@ -11,12 +11,7 @@ export const size = {
 };
 
 export const contentType = "image/jpg";
-export const metadata = {
-  metadataBase: new URL(`${process.env.FRONTEND_LINK}`),
-  openGraph: {
-    images: "/og"
-  }
-};
+
 
 // Image generation
 export default async function Image({ params }) {
@@ -39,7 +34,7 @@ export default async function Image({ params }) {
     (
       <div tw="relative w-full h-full flex items-center justify-center">
         <div tw="absolute flex inset-0">
-          <img src={blogPost.image} alt="blog_image" />
+          <img src={blogPost?.image} alt="blog_image" />
           <div tw="absolute flex inset-0 bg-black bg-opacity-50" />
         </div>
         <div tw="flex flex-col text-neutral-50">
