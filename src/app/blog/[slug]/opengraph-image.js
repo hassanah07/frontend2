@@ -4,14 +4,13 @@ import { ImageResponse } from "next/server";
 export const runtime = "edge";
 
 // Image metadata
-export const alt = "About Acme";
+export const alt = "guidewale blogs";
 export const size = {
   width: 280,
   height: 200
 };
 
 export const contentType = "image/jpg";
-
 
 // Image generation
 export default async function Image({ params }) {
