@@ -11,6 +11,7 @@ const Page = ({ params }) => {
   const [slug, setSlug] = useState("");
   const [shortDesc, setShortDesc] = useState("");
   const [blogId, setBlogId] = useState();
+  const [image, setImage] = useState("");
   const [content, setContent] = useState();
   const getBlog = async () => {
     let res = await fetch(
@@ -30,6 +31,7 @@ const Page = ({ params }) => {
     setTitle(data.title);
     setSlug(data.slug);
     setShortDesc(data.desc);
+    setImage(data.image);
   };
   const editor = useRef(null);
 
@@ -119,6 +121,8 @@ const Page = ({ params }) => {
       setTitle(e.target.value);
     } else if (e.target.name == "desc") {
       setShortDesc(e.target.value);
+    } else if (e.target.name == "image") {
+      setImage(e.target.value);
     }
   };
 
@@ -130,7 +134,8 @@ const Page = ({ params }) => {
       updateId,
       title,
       slug,
-      desc: shortDesc
+      desc: shortDesc,
+      image
     };
     let res = await fetch(
       `${process.env.NEXT_PUBLIC_HOST}/api/blogpost/update`,
@@ -183,12 +188,24 @@ const Page = ({ params }) => {
         </div>
         <div className="w-1/2 py-2 px-2">
           <input
-            value={title}
+            value={slug}
             type="text"
             name="slug"
             id="slug"
             onChange={handleChange}
             placeholder="Short Title"
+            className="py-2 w-full text-slate-500"
+            required
+          />
+        </div>
+        <div className="w-full py-2 px-2">
+          <input
+            value={image}
+            type="text"
+            name="image"
+            id="image"
+            onChange={handleChange}
+            placeholder="Paste your Image Link Here"
             className="py-2 w-full text-slate-500"
             required
           />

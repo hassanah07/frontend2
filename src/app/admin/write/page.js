@@ -14,7 +14,7 @@ const Page = () => {
   const [userId, setUserid] = useState("");
   const [randNumber, setRandNumber] = useState();
   const [slug, setSlug] = useState("");
-  const [title, setTitle] = useState("");
+  const [image, setImage] = useState("");
   const [category, setCategory] = useState("");
   const [shortDesc, setShortDesc] = useState("");
   const [profileStatus, setProfileStatus] = useState(false);
@@ -108,9 +108,18 @@ const Page = () => {
   }, []);
   const handleChange = (e) => {
     if (e.target.name == "slug") {
-      setSlug(e.target.value);
-    } else if (e.target.name == "title") {
-      setTitle(e.target.value);
+      let unslug = e.target.value;
+      unslug = unslug.replace(/\s{2,}/g, " ").trim();
+      unslug = unslug.replace(/ - /g, " ");
+      unslug = unslug.replace(/ -/g, " ");
+      unslug = unslug.replace(/- /g, " ");
+
+
+      setSlug(unslug);
+    } else if (e.target.name == "image") {
+      let unimage = e.target.value;
+      unimage = unimage.replaceAll(/\s/g, "");
+      setImage(unimage);
     } else if (e.target.name == "category") {
       setCategory(e.target.value);
     } else if (e.target.name == "desc") {
@@ -127,7 +136,8 @@ const Page = () => {
       blogId: randNumber,
       slug,
       category,
-      desc: shortDesc
+      desc: shortDesc,
+      image
     };
     let res = await fetch(
       `${process.env.NEXT_PUBLIC_HOST}/api/blogpost/write`,
@@ -222,12 +232,12 @@ const Page = () => {
           <div className="w-full flex flex-wrap p-2">
             <div className="w-1/2 py-2 px-2">
               <input
-                value={title}
+                value={image}
                 type="text"
-                name="title"
-                id="title"
+                name="image"
+                id="image"
                 onChange={handleChange}
-                placeholder="Type Your Article's Title"
+                placeholder="Paste your Image Link Here"
                 className="py-2 w-full text-slate-500"
                 required
               />
@@ -239,7 +249,7 @@ const Page = () => {
                 name="slug"
                 id="slug"
                 onChange={handleChange}
-                placeholder="Short Title"
+                placeholder="Short Title With No Special Characters"
                 className="py-2 w-full text-slate-500"
                 required
               />
