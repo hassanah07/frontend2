@@ -16,7 +16,7 @@ export default async function sitemap() {
   const postUrls = Object.keys(data).map((item) => ({
     url: `${baseUrl}/blog/${data[item].slug}`,
     lastModified: data[item].updatedAt,
-    changeFrequency: "Daily",
+    changeFrequency: "daily",
     priority: 1.0
   }));
   return [
@@ -35,7 +35,7 @@ export default async function sitemap() {
     {
       url: `${baseUrl}/career`,
       lastModified: new Date(),
-      changeFrequency: "Daily",
+      changeFrequency: "daily",
       priority: 1.0
     },
     { url: `${baseUrl}/news`, lastModified: new Date(), priority: 0.1 },
