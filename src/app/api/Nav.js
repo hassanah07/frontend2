@@ -31,11 +31,11 @@ export const nav = [
   //   name: "sports",
   //   link: "/sports",
   // },
-  {
-    id: "navapi6",
-    name: "drugs",
-    link: "/medicine"
-  },
+  // {
+  //   id: "navapi6",
+  //   name: "drugs",
+  //   link: "/medicine"
+  // },
   {
     id: "navapi7",
     name: "contact",

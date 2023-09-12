@@ -15,22 +15,33 @@ export default async function sitemap() {
 
   const postUrls = Object.keys(data).map((item) => ({
     url: `${baseUrl}/blog/${data[item].slug}`,
-    lastModified: data[item].updatedAt
+    lastModified: data[item].updatedAt,
+    changeFrequency: "Daily",
+    priority: 1.0
   }));
   return [
     { url: baseUrl, lastModified: new Date() },
-    { url: `${baseUrl}/contact`, lastModified: new Date() },
-    { url: `${baseUrl}/login`, lastModified: new Date() },
-    { url: `${baseUrl}/registration`, lastModified: new Date() },
-    { url: `${baseUrl}/resetpassword`, lastModified: new Date() },
-    { url: `${baseUrl}/health`, lastModified: new Date() },
-    { url: `${baseUrl}/education`, lastModified: new Date() },
-    { url: `${baseUrl}/sports`, lastModified: new Date() },
-    { url: `${baseUrl}/career`, lastModified: new Date() },
-    { url: `${baseUrl}/news`, lastModified: new Date() },
-    { url: `${baseUrl}/medicine`, lastModified: new Date() },
-    { url: `${baseUrl}/pricing`, lastModified: new Date() },
-    { url: `${baseUrl}/talk`, lastModified: new Date() },
+    { url: `${baseUrl}/contact`, lastModified: new Date(), priority: 0.5 },
+    { url: `${baseUrl}/login`, lastModified: new Date(), priority: 1.2 },
+    { url: `${baseUrl}/registration`, lastModified: new Date(), priority: 0.1 },
+    {
+      url: `${baseUrl}/resetpassword`,
+      lastModified: new Date(),
+      priority: 0.1
+    },
+    { url: `${baseUrl}/health`, lastModified: new Date(), priority: 0.1 },
+    { url: `${baseUrl}/education`, lastModified: new Date(), priority: 0.1 },
+    { url: `${baseUrl}/sports`, lastModified: new Date(), priority: 0.1 },
+    {
+      url: `${baseUrl}/career`,
+      lastModified: new Date(),
+      changeFrequency: "Daily",
+      priority: 1.0
+    },
+    { url: `${baseUrl}/news`, lastModified: new Date(), priority: 0.1 },
+    { url: `${baseUrl}/medicine`, lastModified: new Date(), priority: 0.1 },
+    { url: `${baseUrl}/pricing`, lastModified: new Date(), priority: 0.1 },
+    { url: `${baseUrl}/talk`, lastModified: new Date(), priority: 0.1 },
     ...postUrls
   ];
 }

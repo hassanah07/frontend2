@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const Page = async ({ searchParams }) => {
-  const dataLimit = 6;
+  const dataLimit = 12;
 
   let currentPage = 1;
 
