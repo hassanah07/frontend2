@@ -17,7 +17,7 @@ export const metadata = {
   // verification: {
   //   google: "google-site-verification=53456464811548979874656"
   // },
-  theme_color: "#000"
+  themeColor: "#000"
 };
 
 export default function RootLayout({ children }) {
