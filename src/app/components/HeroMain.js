@@ -14,12 +14,12 @@ const HeroMain = () => {
       </div>
       <div className="lg:w-1/2 w-full leading-relaxed text-gray-500 capitalize justify-between">
         <Link href="/talk">
-          <button className="bg-yellow-500 hover:bg-red-500 px-6 py-2 font-bold text-slate-700 hover:text-slate-200 hover:shadow-2xl hover:transition-all mx-2">
+          <button className="bg-yellow-500 hover:bg-red-500 px-6 py-2 font-bold text-black hover:text-slate-200 hover:shadow-2xl hover:transition-all mx-2">
             Lets Talk
           </button>
         </Link>
         <Link href="/pricing">
-          <button className="bg-red-500 hover:bg-yellow-500 px-6 py-2 font-bold text-slate-700 hover:text-slate-200 hover:shadow-2xl hover:transition-all mx-4">
+          <button className="bg-red-300 hover:bg-yellow-500 px-6 py-2 font-bold text-black hover:text-slate-200 hover:shadow-2xl hover:transition-all mx-4">
             Pricing
           </button>
         </Link>
