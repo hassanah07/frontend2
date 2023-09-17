@@ -22,7 +22,7 @@ export default async function sitemap() {
   return [
     { url: baseUrl, lastModified: new Date() },
     { url: `${baseUrl}/contact`, lastModified: new Date(), priority: 0.5 },
-    { url: `${baseUrl}/login`, lastModified: new Date(), priority: 1.2 },
+    { url: `${baseUrl}/login`, lastModified: new Date(), priority: 0.2 },
     { url: `${baseUrl}/registration`, lastModified: new Date(), priority: 0.1 },
     {
       url: `${baseUrl}/resetpassword`,
