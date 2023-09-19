@@ -3,7 +3,8 @@ import Ribbon from "./components/Ribbon";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import favicon from "./favicon.ico";
-import Script from "next/script";
+import AdsenseInarticle from "./components/AdsenseInarticle";
+import AdSense from "./components/Adsense";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
         <Navigation key={key} />
         {children}
         <Ribbon />
+        <AdSense />
       </body>
     </html>
   );

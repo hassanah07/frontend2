@@ -6,7 +6,7 @@ export const nav = [
   },
   {
     id: "navapi4",
-    name: "jobs",
+    name: "jobs & Career",
     link: "/career"
   },
 
@@ -15,11 +15,11 @@ export const nav = [
   //   name: "news",
   //   link: "/news",
   // },
-  {
-    id: "navapi2",
-    name: "health",
-    link: "/health"
-  },
+  // {
+  //   id: "navapi2",
+  //   name: "health",
+  //   link: "/health"
+  // },
   // {
   //   id: "navapi3",
   //   name: "education",
