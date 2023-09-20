@@ -1,14 +1,13 @@
 import React from "react";
 import Bloglist from "./Bloglist";
 import Pagenumber from "./Pagenumber";
-import AdSense from "./Adsense";
+import AdSenseBanner from "./AdsenseBanner";
 
 const BlogCombine = ({ blogs, pageNumbers, myPage }) => {
   return (
     <>
       <section className="text-gray-600 body-font pb-14 bg-green-100 dark:bg-slate-800 min-h-screen">
         <div className="container px-5 py-24 mx-auto">
-          <AdSense />
           <Bloglist blogs={blogs} />
           <div className="py-14">
             <div className="flex justify-center items-center align-bottom">
@@ -17,6 +16,7 @@ const BlogCombine = ({ blogs, pageNumbers, myPage }) => {
           </div>
         </div>
       </section>
+      <AdSenseBanner />
     </>
   );
 };

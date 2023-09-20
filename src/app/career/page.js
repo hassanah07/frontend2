@@ -1,6 +1,5 @@
 import Quicklink from "../components/Quicklink";
 import BlogCombine from "../components/BlogCombine";
-import AdSense from "../components/Adsense";
 
 export const metadata = {
   title: "Jobs and Career",
@@ -52,8 +51,8 @@ const Page = async ({ searchParams }) => {
         nameTwo={nameTwo}
         nameThree={nameThree}
       />
+      
       <BlogCombine blogs={blogs} pageNumbers={pageNumbers} myPage={myPage} />
-      <AdSense />
     </>
   );
 };

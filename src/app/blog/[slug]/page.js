@@ -1,4 +1,11 @@
 import AdSense from "@/app/components/Adsense";
+import AdSenseBlogMiddleOne from "@/app/components/AdsenseBlogMiddleOne";
+import AdSenseBlogMiddleThree from "@/app/components/AdsenseBlogMiddleThree";
+import AdSenseBlogMiddleTwo from "@/app/components/AdsenseBlogMiddleTwo";
+import AdSenseBlogSideFour from "@/app/components/AdsenseBlogSideFour";
+import AdSenseBlogSideOne from "@/app/components/AdsenseBlogSideOne";
+import AdSenseBlogSideThree from "@/app/components/AdsenseBlogSideThree";
+import AdSenseBlogSideTwo from "@/app/components/AdsenseBlogSideTwo";
 import Quicklink from "@/app/components/Quicklink";
 import React from "react";
 
@@ -66,10 +73,8 @@ const Page = async ({ params }) => {
             <div className="flex flex-wrap -m-4">
               <div className="p-0 md:w-1/4 hidden md:block">
                 <div className="min-h-screen rounded-lg overflow-hidden">
-                  <AdSense /> <br />
-                  <AdSense /> <br />
-                  <AdSense /> <br />
-                  <AdSense /> <br />
+                  <AdSenseBlogSideOne /> <br />
+                  <AdSenseBlogSideTwo /> <br />
                 </div>
               </div>
               <div className="p-0 md:w-2/4">
@@ -77,14 +82,14 @@ const Page = async ({ params }) => {
                   <div className="title dark:text-slate-50 text-black text-2xl font-semibold text-center">
                     {blogPost.heading}
                   </div>
-                  <AdSense />
+                  <AdSenseBlogMiddleOne />
                   {/* section One  11111111111*/}
                   <div
                     className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
                     dangerouslySetInnerHTML={{ __html: blogPost.content }}
                   />
                   {/* section Two 222222222222  */}
-                  <AdSense />
+                  <AdSenseBlogMiddleTwo />
 
                   {blogPost.contentTwo != null && (
                     <div
@@ -108,15 +113,13 @@ const Page = async ({ params }) => {
                       Verified By: Admin
                     </p>
                   </div>
-                  <AdSense />
+                  <AdSenseBlogMiddleThree />
                 </div>
               </div>
               <div className="p-0 md:w-1/4 hidden md:block">
                 <div className="min-h-screen rounded-lg overflow-hidden">
-                  <AdSense /> <br />
-                  <AdSense /> <br />
-                  <AdSense /> <br />
-                  <AdSense /> <br />
+                  <AdSenseBlogSideThree /> <br />
+                  <AdSenseBlogSideFour /> <br />
                 </div>
               </div>
             </div>
