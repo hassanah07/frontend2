@@ -70,6 +70,7 @@ const Page = async ({ params }) => {
                   <AdSense /> <br />
                   <AdSense /> <br />
                   <AdSense /> <br />
+                  <AdSense /> <br />
                 </div>
               </div>
               <div className="p-0 md:w-2/4">
@@ -88,13 +89,13 @@ const Page = async ({ params }) => {
 
                   <div
                     className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
-                    dangerouslySetInnerHTML={{ __html: blogPost.content }}
+                    dangerouslySetInnerHTML={{ __html: blogPost.contentTwo }}
                   />
                   {/* section Three 3333333333  */}
                   <AdSense />
                   <div
                     className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
-                    dangerouslySetInnerHTML={{ __html: blogPost.content }}
+                    dangerouslySetInnerHTML={{ __html: blogPost.contentThree }}
                   />
                   <div className="flex flex-row justify-center items-center">
                     <p className="font-extrabold capitalize dark:bg-slate-500 text-slate-500 dark:text-slate-100 bg-gray-200 text-center m-2 p-2 w-[100%] md:w-[50%] rounded-xl">
@@ -106,6 +107,7 @@ const Page = async ({ params }) => {
               </div>
               <div className="p-0 md:w-1/4 hidden md:block">
                 <div className="min-h-screen rounded-lg overflow-hidden">
+                  <AdSense /> <br />
                   <AdSense /> <br />
                   <AdSense /> <br />
                   <AdSense /> <br />
