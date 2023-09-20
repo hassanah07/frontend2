@@ -3,8 +3,6 @@ import Ribbon from "./components/Ribbon";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import favicon from "./favicon.ico";
-import AdsenseInarticle from "./components/AdsenseInarticle";
-// import AdSense from "./components/Adsense";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,13 +25,13 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2409909836337800"
           crossorigin="anonymous"
         ></script>
-      </head>
+      </head> */}
       <body className={inter.className}>
         <Navigation key={key} />
         {children}
