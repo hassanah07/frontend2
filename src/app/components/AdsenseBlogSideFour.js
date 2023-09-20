@@ -30,7 +30,7 @@ const AdSenseBlogSideFour = () => {
     <div id="adsense-container">
       <ins
         class="adsbygoogle"
-        style="display:block"
+        style={{ display: block }}
         data-ad-client="ca-pub-2409909836337800"
         data-ad-slot="2453893709"
         data-ad-format="auto"
