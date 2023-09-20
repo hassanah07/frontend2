@@ -9,7 +9,10 @@ const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 
 const Page = () => {
   const editor = useRef(null);
+  const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [contentTwo, setContentTwo] = useState("");
+  const [contentThree, setContentThree] = useState("");
   const [author, setAuthor] = useState("");
   const [userId, setUserid] = useState("");
   const [randNumber, setRandNumber] = useState();
@@ -55,8 +58,8 @@ const Page = () => {
   ];
   const config = {
     readonly: false,
-    height: "450px",
-    width: "100%",
+    height: "100px",
+    // width: "100%",
     showXPathInStatusbar: false,
     showCharsCounter: false,
     showWordsCounter: false,
@@ -114,7 +117,6 @@ const Page = () => {
       unslug = unslug.replace(/ -/g, " ");
       unslug = unslug.replace(/- /g, " ");
 
-
       setSlug(unslug);
     } else if (e.target.name == "image") {
       let unimage = e.target.value;
@@ -124,13 +126,18 @@ const Page = () => {
       setCategory(e.target.value);
     } else if (e.target.name == "desc") {
       setShortDesc(e.target.value);
+    } else if (e.target.name == "title") {
+      setTitle(e.target.value);
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const blogData = {
+      title,
       content,
+      contentTwo,
+      contentThree,
       author,
       userId,
       blogId: randNumber,
@@ -169,14 +176,47 @@ const Page = () => {
       {profileStatus == true && (
         <div className="pb-16">
           <ToastContainer />
-          <JoditEditor
-            ref={editor}
-            value={content}
-            tabIndex={1}
-            config={config}
-            onBlur={(newContent) => setContent(newContent)}
-            onChange={(newContent) => {}}
-          />
+          {/* Section One 11111111111111 */}
+          <div className="w-full py-2 px-2">
+            <input
+              value={title}
+              type="text"
+              name="title"
+              id="title"
+              onChange={handleChange}
+              placeholder="Blog Title"
+              className="py-2 w-full text-slate-500"
+              required
+            />
+          </div>
+          <div className="">
+            <JoditEditor
+              ref={editor}
+              value={content}
+              tabIndex={1}
+              config={config}
+              onBlur={(newContent) => setContent(newContent)}
+              onChange={(newContent) => {}}
+            />
+            {/* Section Two 22222222222222 */}
+            <JoditEditor
+              ref={editor}
+              value={contentTwo}
+              tabIndex={1}
+              config={config}
+              onBlur={(newContent) => setContentTwo(newContent)}
+              onChange={(newContent) => {}}
+            />
+            {/* Section Three 3333333333333 */}
+            <JoditEditor
+              ref={editor}
+              value={contentThree}
+              tabIndex={1}
+              config={config}
+              onBlur={(newContent) => setContentThree(newContent)}
+              onChange={(newContent) => {}}
+            />
+          </div>
           <div className="py-2"></div>
           <div className="w-full flex flex-wrap p-2">
             <div className="w-1/2 py-2 px-2">

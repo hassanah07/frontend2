@@ -18,6 +18,10 @@ const Page = ({ params }) => {
     progress: undefined
   };
   const [dataBlog, setDataBlog] = useState();
+  const [blogDataTwo, setBlogDataTwo] = useState();
+  const [blogDataThree, setBlogDataThree] = useState();
+  const [heading, setHeading] = useState()
+  const [slug, setSlug] = useState();
   const getBlog = async () => {
     let res = await fetch(
       `${process.env.NEXT_PUBLIC_HOST}/api/blogpost/specificdata`,
@@ -33,37 +37,41 @@ const Page = ({ params }) => {
     );
     const data = await res.json();
     setDataBlog(data.content);
+    setHeading(data.heading);
+    setSlug(data.slug);
+    setBlogDataTwo(data.contentTwo);
+    setBlogDataThree(data.contentThree);
+    console.log(data);
+    
   };
-  const deleteBlog = async () => {
-    let res = await fetch(
-      `${process.env.NEXT_PUBLIC_HOST}/api/blogpost/drafted`,
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-          "auth-token": localStorage.getItem("token")
-        },
-        body: JSON.stringify({ blogId: params.id })
-      }
-    );
-    const delData = await res.json();
-    if ((res.msg = true)) {
-      toast.success("Data Deleted", toastOption);
-      push(`/admin/list`);
-    }
-  };
+
   useEffect(() => {
     getBlog();
   }, []);
 
   return (
     <>
-      <div className="text-gray-600 body-font bg-green-100 dark:bg-slate-800 flex flex-row min-h-screen justify-center items-center pb-14">
+      <div className="text-gray-600 body-font bg-green-100 dark:bg-slate-800 flex flex-col min-h-screen justify-center items-center pb-36 pt-14">
         <ToastContainer />
+        <div className="title dark:text-slate-50 text-black text-2xl font-semibold">
+          {heading}
+        </div>
+
         <div
           className="text-justify m-2 p-2 md:w-[50%] dark:text-slate-100"
           dangerouslySetInnerHTML={{ __html: dataBlog }}
         />
+        <div
+          className="text-justify m-2 p-2 md:w-[50%] dark:text-slate-100"
+          dangerouslySetInnerHTML={{ __html: blogDataTwo }}
+        />
+        <div
+          className="text-justify m-2 p-2 md:w-[50%] dark:text-slate-100"
+          dangerouslySetInnerHTML={{ __html: blogDataThree }}
+        />
+        <div className="title dark:text-slate-50 text-black">
+          Blog URL: {process.env.NEXT_PUBLIC_FRONTEND_LINK}/blog/{slug}
+        </div>
       </div>
     </>
   );

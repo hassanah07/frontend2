@@ -1,5 +1,6 @@
 import Quicklink from "../components/Quicklink";
 import BlogCombine from "../components/BlogCombine";
+import AdSense from "../components/Adsense";
 
 export const metadata = {
   title: "Jobs and Career",
@@ -15,7 +16,6 @@ const Page = async ({ searchParams }) => {
   if (Number(searchParams.page) >= 1) {
     currentPage = Number(searchParams.page);
   }
-  // console.log(currentPage);
   // let offset = (currentPage - 1) * dataLimit;
   const url = `${process.env.NEXT_PUBLIC_HOST_SSR}/api/blogpost/view?currentpage=${currentPage}&datalimit=${dataLimit}`;
   const response = await fetch(url, {
@@ -53,6 +53,7 @@ const Page = async ({ searchParams }) => {
         nameThree={nameThree}
       />
       <BlogCombine blogs={blogs} pageNumbers={pageNumbers} myPage={myPage} />
+      <AdSense />
     </>
   );
 };

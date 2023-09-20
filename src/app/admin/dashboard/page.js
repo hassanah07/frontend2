@@ -19,7 +19,7 @@ export const data = {
         "rgba(255, 206, 86, 0.2)",
         "rgba(75, 192, 192, 0.2)",
         "rgba(153, 102, 255, 0.2)",
-        "rgba(255, 159, 64, 0.2)",
+        "rgba(255, 159, 64, 0.2)"
       ],
       borderColor: [
         "rgba(255, 99, 132, 1)",
@@ -27,11 +27,11 @@ export const data = {
         "rgba(255, 206, 86, 1)",
         "rgba(75, 192, 192, 1)",
         "rgba(153, 102, 255, 1)",
-        "rgba(255, 159, 64, 1)",
+        "rgba(255, 159, 64, 1)"
       ],
-      borderWidth: 1,
-    },
-  ],
+      borderWidth: 1
+    }
+  ]
 };
 const Page = () => {
   // const [profileData, setProfileData] = useState("");
@@ -46,7 +46,7 @@ const Page = () => {
     closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
-    progress: undefined,
+    progress: undefined
   };
   // const logResult = async () => {
   //   let logResponse = await fetch(
@@ -72,8 +72,8 @@ const Page = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "auth-token": localStorage.getItem("token"),
-        },
+          "auth-token": localStorage.getItem("token")
+        }
       }
     );
     const data = await res.json();
@@ -87,8 +87,8 @@ const Page = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "auth-token": localStorage.getItem("token"),
-        },
+          "auth-token": localStorage.getItem("token")
+        }
       }
     );
     const data = await res.json();
@@ -243,7 +243,6 @@ const Page = () => {
           </div>
         </div>
       </div>
-      {/* <div dangerouslySetInnerHTML={{ __html: content }} /> */}
     </>
   );
 };

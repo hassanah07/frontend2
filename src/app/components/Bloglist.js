@@ -14,7 +14,9 @@ const Bloglist = ({ blogs }) => {
           >
             <div className="border border-gray-500 p-6 rounded-lg hover:bg-pink-600 text-black dark:text-slate-200 text-justify">
               <div className="w-10 h-10 inline-flex items-center justify-center rounded-full bg-pink-700 text-pink-100 mb-4">
-                <span>ic</span>
+                <span className="font-semibold">
+                  <small>GW</small>
+                </span>
               </div>
               <h2 className="text-lg text-gray-900 dark:text-slate-200 font-medium title-font mb-2">
                 {blogs[item].title}

@@ -1,3 +1,4 @@
+import AdSense from "@/app/components/Adsense";
 import Quicklink from "@/app/components/Quicklink";
 import React from "react";
 
@@ -60,9 +61,63 @@ const Page = async ({ params }) => {
         nameThree={nameThree}
       />
       <div className="pb-14 text-gray-600 body-font bg-green-100 dark:bg-slate-800">
-        <div className="flex flex-row min-h-screen justify-center items-center pt-10">
+        <section className="text-gray-600 body-font">
+          <div className="container px-5 py-24 mx-auto">
+            <div className="flex flex-wrap -m-4">
+              <div className="p-0 md:w-1/4 hidden md:block">
+                <div className="min-h-screen rounded-lg overflow-hidden">
+                  <AdSense /> <br />
+                  <AdSense /> <br />
+                  <AdSense /> <br />
+                  <AdSense /> <br />
+                </div>
+              </div>
+              <div className="p-0 md:w-2/4">
+                <div className="min-h-screen rounded-lg overflow-hidden">
+                  <div className="title dark:text-slate-50 text-black text-2xl font-semibold text-center">
+                    {blogPost.heading}
+                  </div>
+                  <AdSense />
+                  {/* section One  11111111111*/}
+                  <div
+                    className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
+                    dangerouslySetInnerHTML={{ __html: blogPost.content }}
+                  />
+                  {/* section Two 222222222222  */}
+                  <AdSense />
+
+                  <div
+                    className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
+                    dangerouslySetInnerHTML={{ __html: blogPost.content }}
+                  />
+                  {/* section Three 3333333333  */}
+                  <AdSense />
+                  <div
+                    className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
+                    dangerouslySetInnerHTML={{ __html: blogPost.content }}
+                  />
+                  <div className="flex flex-row justify-center items-center">
+                    <p className="font-extrabold capitalize dark:bg-slate-500 text-slate-500 dark:text-slate-100 bg-gray-200 text-center m-2 p-2 w-[100%] md:w-[50%] rounded-xl">
+                      Verified By: Admin
+                    </p>
+                  </div>
+                  <AdSense />
+                </div>
+              </div>
+              <div className="p-0 md:w-1/4 hidden md:block">
+                <div className="min-h-screen rounded-lg overflow-hidden">
+                  <AdSense /> <br />
+                  <AdSense /> <br />
+                  <AdSense /> <br />
+                  <AdSense /> <br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* <div className="flex flex-row min-h-screen justify-center items-center pt-10">
           <div
-            className="text-justify mx-5 w-[100vw] md:w-[50%] text-black dark:text-slate-100"
+            className="text-justify mx-5 w-[100vw] md:w-[50%] text-black dark:text-slate-100 adsbygoogle`"
             dangerouslySetInnerHTML={{ __html: blogPost.content }}
           />
         </div>
@@ -70,7 +125,7 @@ const Page = async ({ params }) => {
           <p className="font-extrabold capitalize dark:bg-slate-500 text-slate-500 dark:text-slate-100 bg-gray-200 text-center m-2 p-2 w-[100%] md:w-[50%] rounded-xl">
             Verified By: Admin
           </p>
-        </div>
+        </div> */}
       </div>
     </>
   );

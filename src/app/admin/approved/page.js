@@ -57,15 +57,10 @@ const Page = () => {
       }
     );
     res = await res.json();
-    console.log(res);
     const blogs = res.blogposts;
-    // console.log(res);
     setActivePage(activePage + 1);
-    // setData(blogs);
     setNewData([...newData, ...blogs]);
-
     setTotalBlogs(res.totalItems);
-    console.log(newData);
   };
 
   useEffect(() => {

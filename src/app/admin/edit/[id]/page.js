@@ -8,6 +8,9 @@ import dynamic from "next/dynamic";
 const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 const Page = ({ params }) => {
   const [title, setTitle] = useState("");
+  const [heading, setHeading] = useState("");
+  const [contentTwo, setContentTwo] = useState("");
+  const [contentThree, setContentThree] = useState("");
   const [slug, setSlug] = useState("");
   const [shortDesc, setShortDesc] = useState("");
   const [blogId, setBlogId] = useState();
@@ -26,7 +29,10 @@ const Page = ({ params }) => {
       }
     );
     const data = await res.json();
+    setHeading(data.heading);
     setContent(data.content);
+    setContentTwo(data.contentTwo);
+    setContentThree(data.contentThree);
     setBlogId(data.blogId);
     setTitle(data.title);
     setSlug(data.slug);
@@ -72,7 +78,7 @@ const Page = ({ params }) => {
   ];
   const config = {
     readonly: false,
-    height: "450px",
+    height: "100px",
     width: "100%",
     showXPathInStatusbar: false,
     showCharsCounter: false,
@@ -111,7 +117,6 @@ const Page = ({ params }) => {
       }
     );
     const userdata = await logResponse.json();
-    console.log(userdata);
   };
 
   const handleChange = (e) => {
@@ -123,14 +128,19 @@ const Page = ({ params }) => {
       setShortDesc(e.target.value);
     } else if (e.target.name == "image") {
       setImage(e.target.value);
+    } else if (e.target.name == "heading") {
+      setHeading(e.target.value);
     }
   };
 
   const handleSubmit = async (e) => {
     const updateId = Math.round(Math.random() * 1000011119);
     const payload = {
+      heading,
       blogId: params.id,
       content,
+      contentTwo,
+      contentThree,
       updateId,
       title,
       slug,
@@ -163,12 +173,45 @@ const Page = ({ params }) => {
   return (
     <div className="pb-16">
       <ToastContainer />
+      <div className="w-full py-2 px-2">
+        <input
+          value={heading}
+          type="text"
+          name="heading"
+          id="heading"
+          onChange={handleChange}
+          placeholder="Blog heading"
+          className="py-2 w-full text-slate-500"
+          required
+        />
+      </div>
+      <small className="text-center text-red-500">Section One</small>
+
       <JoditEditor
         ref={editor}
         value={content}
         tabIndex={1}
         config={config}
         onBlur={(newContent) => setContent(newContent)}
+        onChange={(newContent) => {}}
+      />
+      <small className="text-center text-red-500">Section Two</small>
+
+      <JoditEditor
+        ref={editor}
+        value={contentTwo}
+        tabIndex={1}
+        config={config}
+        onBlur={(newContent) => setContentTwo(newContent)}
+        onChange={(newContent) => {}}
+      />
+      <small className="text-center text-red-500">Section Three</small>
+      <JoditEditor
+        ref={editor}
+        value={contentThree}
+        tabIndex={1}
+        config={config}
+        onBlur={(newContent) => setContentThree(newContent)}
         onChange={(newContent) => {}}
       />
       <div className="py-2"></div>

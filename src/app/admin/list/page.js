@@ -95,6 +95,7 @@ const Page = () => {
           );
         })}
       </InfiniteScroll>
+      
     </div>
   );
 };
