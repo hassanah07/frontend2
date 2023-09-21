@@ -82,7 +82,6 @@ const Page = async ({ params }) => {
                   <div className="title dark:text-slate-50 text-black text-2xl font-semibold text-center">
                     {blogPost.heading}
                   </div>
-                  <AdSenseBlogMiddleOne />
                   {/* section One  11111111111*/}
                   <div
                     className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
@@ -90,7 +89,6 @@ const Page = async ({ params }) => {
                   />
                   {/* section Two 222222222222  */}
                   <AdSenseBlogMiddleTwo />
-
                   {blogPost.contentTwo != null && (
                     <div
                       className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
@@ -98,7 +96,8 @@ const Page = async ({ params }) => {
                     />
                   )}
                   {/* section Three 3333333333  */}
-                  <AdSense />
+                  <AdSenseBlogMiddleOne />
+
                   {blogPost.contentThree != null && (
                     <div
                       className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
