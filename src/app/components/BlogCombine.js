@@ -16,7 +16,7 @@ const BlogCombine = ({ blogs, pageNumbers, myPage }) => {
           </div>
         </div>
       </section>
-      <AdSenseBanner />
+      {/* <AdSenseBanner /> */}
     </>
   );
 };

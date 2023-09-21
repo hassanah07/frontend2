@@ -73,8 +73,8 @@ const Page = async ({ params }) => {
             <div className="flex flex-wrap -m-4">
               <div className="p-0 md:w-1/4 hidden md:block">
                 <div className="min-h-screen rounded-lg overflow-hidden">
-                  <AdSenseBlogSideOne /> <br />
-                  <AdSenseBlogSideTwo /> <br />
+                  {/* <AdSenseBlogSideOne /> <br />
+                  <AdSenseBlogSideTwo /> <br /> */}
                 </div>
               </div>
               <div className="p-0 md:w-2/4">
@@ -88,7 +88,7 @@ const Page = async ({ params }) => {
                     dangerouslySetInnerHTML={{ __html: blogPost.content }}
                   />
                   {/* section Two 222222222222  */}
-                  <AdSenseBlogMiddleTwo />
+                  {/* <AdSenseBlogMiddleTwo /> */}
                   {blogPost.contentTwo != null && (
                     <div
                       className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
@@ -96,7 +96,7 @@ const Page = async ({ params }) => {
                     />
                   )}
                   {/* section Three 3333333333  */}
-                  <AdSenseBlogMiddleOne />
+                  {/* <AdSenseBlogMiddleOne /> */}
 
                   {blogPost.contentThree != null && (
                     <div
@@ -112,13 +112,13 @@ const Page = async ({ params }) => {
                       Verified By: Admin
                     </p>
                   </div>
-                  <AdSenseBlogMiddleThree />
+                  {/* <AdSenseBlogMiddleThree /> */}
                 </div>
               </div>
               <div className="p-0 md:w-1/4 hidden md:block">
                 <div className="min-h-screen rounded-lg overflow-hidden">
-                  <AdSenseBlogSideThree /> <br />
-                  <AdSenseBlogSideFour /> <br />
+                  {/* <AdSenseBlogSideThree /> <br />
+                  <AdSenseBlogSideFour /> <br /> */}
                 </div>
               </div>
             </div>
