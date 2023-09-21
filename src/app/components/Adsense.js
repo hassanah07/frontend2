@@ -3,21 +3,6 @@ import React, { useEffect } from "react";
 
 const AdSense = () => {
   useEffect(() => {
-    // Check if the adsbygoogle script has already been loaded
-    // if (!window.adsbygoogle) {
-    //   // Define the adsbygoogle variable
-    //   window.adsbygoogle = window.adsbygoogle || [];
-
-    //   // Push the ad loading function to the adsbygoogle array
-    //   window.adsbygoogle.push({});
-
-    //   // Ensure that the script is loaded
-    //   const script = document.createElement("script");
-    //   script.async = true;
-    //   script.src =
-    //     "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-    //   document.head.appendChild(script);
-    // }
 
     // Target the specific div element with id "adsense-container"
     const adsenseContainer = document.getElementById("adsense-container-ad");
