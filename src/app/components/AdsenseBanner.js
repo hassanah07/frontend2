@@ -2,27 +2,36 @@
 import React, { useEffect } from "react";
 
 const AdSenseBanner = () => {
-  if (typeof window !== "undefined") {
-    if (!window.adsbygoogle || !window.adsbygoogle.push) {
-      window.adsbygoogle = window.adsbygoogle || [];
-      window.adsbygoogle.push({});
+  // if (typeof window !== "undefined") {
+  //   if (!window.adsbygoogle || !window.adsbygoogle.push) {
+  //     window.adsbygoogle = window.adsbygoogle || [];
+  //     window.adsbygoogle.push({});
 
-      const script = document.createElement("script");
-      script.async = true;
-      script.src =
-        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-      document.head.appendChild(script);
-    }
-  }
+  //     const script = document.createElement("script");
+  //     script.async = true;
+  //     script.src =
+  //       "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
+  //     document.head.appendChild(script);
+  //   }
+  // }
+  // useEffect(() => {
+  //   // Target the specific div element with id "adsense-container"
+  //   const adsenseContainer = document.getElementById(
+  //     "adsense-container-banner"
+  //   );
+  //   if (adsenseContainer) {
+  //     (window.adsbygoogle = window.adsbygoogle || []).push({
+  //       className: "adsbygoogle-banner" // Use the component-specific class name
+  //     });
+  //   }
+  // }, []);
   useEffect(() => {
-    // Target the specific div element with id "adsense-container"
-    const adsenseContainer = document.getElementById(
-      "adsense-container-banner"
-    );
-    if (adsenseContainer) {
+    try {
       (window.adsbygoogle = window.adsbygoogle || []).push({
-        className: "adsbygoogle-banner" // Use the component-specific class name
+        className: "adsbygoogle-banner"
       });
+    } catch (err) {
+      console.log(err);
     }
   }, []);
 

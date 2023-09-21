@@ -1,4 +1,5 @@
 import AdSense from "@/app/components/Adsense";
+import AdSenseBanner from "@/app/components/AdsenseBanner";
 import AdSenseBlogMiddleOne from "@/app/components/AdsenseBlogMiddleOne";
 import AdSenseBlogMiddleThree from "@/app/components/AdsenseBlogMiddleThree";
 import AdSenseBlogMiddleTwo from "@/app/components/AdsenseBlogMiddleTwo";
@@ -96,7 +97,7 @@ const Page = async ({ params }) => {
                     />
                   )}
                   {/* section Three 3333333333  */}
-                  <AdSenseBlogMiddleOne />
+                  {/* <AdSenseBlogMiddleOne /> */}
 
                   {blogPost.contentThree != null && (
                     <div
@@ -112,7 +113,7 @@ const Page = async ({ params }) => {
                       Verified By: Admin
                     </p>
                   </div>
-                  <AdSenseBlogMiddleThree />
+                  {/* <AdSenseBlogMiddleThree /> */}
                 </div>
               </div>
               <div className="p-0 md:w-1/4 hidden md:block">
@@ -141,6 +142,7 @@ const Page = async ({ params }) => {
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2409909836337800"
         crossOrigin="anonymous"
       ></script> */}
+      <AdSenseBanner />
     </>
   );
 };
