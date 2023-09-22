@@ -76,14 +76,14 @@ const Page = async ({ params }) => {
                   </div>
                   {/* section One  11111111111*/}
                   <div
-                    className="text-justify mx-5 text-black dark:text-slate-100`"
+                    className="text-justify mx-5 text-black dark:text-slate-100"
                     dangerouslySetInnerHTML={{ __html: blogPost.content }}
                   />
                   {/* section Two 222222222222  */}
                  
                   {blogPost.contentTwo != null && (
                     <div
-                      className="text-justify mx-5 text-black dark:text-slate-100`"
+                      className="text-justify mx-5 text-black dark:text-slate-100"
                       dangerouslySetInnerHTML={{ __html: blogPost.contentTwo }}
                     />
                   )}
@@ -91,7 +91,7 @@ const Page = async ({ params }) => {
 
                   {blogPost.contentThree != null && (
                     <div
-                      className="text-justify mx-5 text-black dark:text-slate-100`"
+                      className="text-justify mx-5 text-black dark:text-slate-100"
                       dangerouslySetInnerHTML={{
                         __html: blogPost.contentThree
                       }}

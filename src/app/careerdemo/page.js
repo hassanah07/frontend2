@@ -59,7 +59,6 @@ const Page = async ({ searchParams }) => {
         pageNumbers={pageNumbers}
         myPage={myPage}
       />
-      {/* <AdSenseBanner /> */}
       
     </>
   );
