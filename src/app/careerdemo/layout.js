@@ -5,11 +5,11 @@ export default function CareerLayout({ children }) {
     <>
       <section>{children}</section>
       {/* <AdsbygoogleInitializer /> */}
-      <script
+      {/* <script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2409909836337800"
         crossOrigin="anonymous"
-      ></script>
+      ></script> */}
     </>
   );
 }

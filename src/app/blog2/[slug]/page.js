@@ -1,15 +1,6 @@
-import AdSense from "@/app/components/Adsense";
-import AdSenseBanner from "@/app/components/AdsenseBanner";
-import AdSenseBlogMiddleOne from "@/app/components/AdsenseBlogMiddleOne";
-import AdSenseBlogMiddleThree from "@/app/components/AdsenseBlogMiddleThree";
-import AdSenseBlogMiddleTwo from "@/app/components/AdsenseBlogMiddleTwo";
-import AdSenseBlogSideFour from "@/app/components/AdsenseBlogSideFour";
-import AdSenseBlogSideOne from "@/app/components/AdsenseBlogSideOne";
-import AdSenseBlogSideThree from "@/app/components/AdsenseBlogSideThree";
-import AdSenseBlogSideTwo from "@/app/components/AdsenseBlogSideTwo";
 import Quicklink from "@/app/components/Quicklink";
+import Goole from "@/app/democompo/Goole";
 import React from "react";
-
 export async function generateMetadata({ params }, parent) {
   const id = params.id;
   const data = await fetch(
@@ -31,9 +22,6 @@ export async function generateMetadata({ params }, parent) {
     metadataBase: new URL(`${process.env.FRONTEND_LINK}`),
     alternates: {
       canonical: `${process.env.FRONTEND_LINK}/blog/${blogPost.slug}`
-      // languages: {
-      //   "en-US": `${process.env.FRONTEND_LINK}/en-US/blog/${blogPost.slug}`,
-      // },
     }
   };
 }
@@ -73,10 +61,7 @@ const Page = async ({ params }) => {
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-wrap -m-4">
               <div className="p-0 md:w-1/4 hidden md:block">
-                <div className="min-h-screen rounded-lg overflow-hidden">
-                  {/* <AdSenseBlogSideOne /> <br />
-                  <AdSenseBlogSideTwo /> <br /> */}
-                </div>
+                <div className="min-h-screen rounded-lg overflow-hidden"></div>
               </div>
               <div className="p-0 md:w-2/4">
                 <div className="min-h-screen rounded-lg overflow-hidden">
@@ -89,7 +74,6 @@ const Page = async ({ params }) => {
                     dangerouslySetInnerHTML={{ __html: blogPost.content }}
                   />
                   {/* section Two 222222222222  */}
-                  <AdSenseBlogMiddleTwo />
                   {blogPost.contentTwo != null && (
                     <div
                       className="text-justify mx-5 text-black dark:text-slate-100`"
@@ -97,7 +81,6 @@ const Page = async ({ params }) => {
                     />
                   )}
                   {/* section Three 3333333333  */}
-                  {/* <AdSenseBlogMiddleOne /> */}
 
                   {blogPost.contentThree != null && (
                     <div
@@ -113,14 +96,10 @@ const Page = async ({ params }) => {
                       Verified By: Admin
                     </p>
                   </div>
-                  {/* <AdSenseBlogMiddleThree /> */}
                 </div>
               </div>
               <div className="p-0 md:w-1/4 hidden md:block">
-                <div className="min-h-screen rounded-lg overflow-hidden">
-                  {/* <AdSenseBlogSideThree /> <br />
-                  <AdSenseBlogSideFour /> <br /> */}
-                </div>
+                <div className="min-h-screen rounded-lg overflow-hidden"></div>
               </div>
             </div>
           </div>
@@ -137,15 +116,9 @@ const Page = async ({ params }) => {
           </p>
         </div> */}
       </div>
-      {/* <script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2409909836337800"
-        crossOrigin="anonymous"
-      ></script> */}
-      <AdSenseBanner />
+      <Goole client={`ca-pub-2409909836337800`} slot={8287183628} />
     </>
   );
 };
 
 export default Page;
-// export default Page({ params });

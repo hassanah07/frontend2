@@ -1,7 +1,7 @@
+
 import Quicklink from "../components/Quicklink";
 import BlogCombine from "../components/BlogCombine";
 import BlogCombineTesting from "../components/BlogCombineTesting";
-import AdSenseBanner from "../components/AdsenseBanner";
 
 export const metadata = {
   title: "Jobs and Career",
@@ -59,7 +59,8 @@ const Page = async ({ searchParams }) => {
         pageNumbers={pageNumbers}
         myPage={myPage}
       />
-      <AdSenseBanner />
+      {/* <AdSenseBanner /> */}
+      
     </>
   );
 };

@@ -1,6 +1,5 @@
 import React from "react";
 import Pagenumber from "./Pagenumber";
-import AdSenseBanner from "./AdsenseBanner";
 import BloglistTesting from "./BlogListTesting";
 
 const BlogCombineTesting = ({ blogs, pageNumbers, myPage }) => {
@@ -16,7 +15,6 @@ const BlogCombineTesting = ({ blogs, pageNumbers, myPage }) => {
           </div>
         </div>
       </section>
-      {/* <AdSenseBanner /> */}
     </>
   );
 };
