@@ -1,5 +1,4 @@
 import Quicklink from "@/app/components/Quicklink";
-import Goole from "@/app/democompo/Goole";
 import React from "react";
 export async function generateMetadata({ params }, parent) {
   const id = params.id;
@@ -116,7 +115,6 @@ const Page = async ({ params }) => {
           </p>
         </div> */}
       </div>
-      <Goole client={`ca-pub-2409909836337800`} slot={8287183628} />
     </>
   );
 };
