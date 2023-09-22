@@ -1,11 +1,4 @@
-import AdSense from "@/app/components/Adsense";
-import AdSenseBlogMiddleOne from "@/app/components/AdsenseBlogMiddleOne";
-import AdSenseBlogMiddleThree from "@/app/components/AdsenseBlogMiddleThree";
-import AdSenseBlogMiddleTwo from "@/app/components/AdsenseBlogMiddleTwo";
-import AdSenseBlogSideFour from "@/app/components/AdsenseBlogSideFour";
-import AdSenseBlogSideOne from "@/app/components/AdsenseBlogSideOne";
-import AdSenseBlogSideThree from "@/app/components/AdsenseBlogSideThree";
-import AdSenseBlogSideTwo from "@/app/components/AdsenseBlogSideTwo";
+
 import Quicklink from "@/app/components/Quicklink";
 import React from "react";
 
@@ -73,8 +66,7 @@ const Page = async ({ params }) => {
             <div className="flex flex-wrap -m-4">
               <div className="p-0 md:w-1/4 hidden md:block">
                 <div className="min-h-screen rounded-lg overflow-hidden">
-                  {/* <AdSenseBlogSideOne /> <br />
-                  <AdSenseBlogSideTwo /> <br /> */}
+                  
                 </div>
               </div>
               <div className="p-0 md:w-2/4">
@@ -84,23 +76,22 @@ const Page = async ({ params }) => {
                   </div>
                   {/* section One  11111111111*/}
                   <div
-                    className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
+                    className="text-justify mx-5 text-black dark:text-slate-100`"
                     dangerouslySetInnerHTML={{ __html: blogPost.content }}
                   />
                   {/* section Two 222222222222  */}
-                  {/* <AdSenseBlogMiddleTwo /> */}
+                 
                   {blogPost.contentTwo != null && (
                     <div
-                      className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
+                      className="text-justify mx-5 text-black dark:text-slate-100`"
                       dangerouslySetInnerHTML={{ __html: blogPost.contentTwo }}
                     />
                   )}
                   {/* section Three 3333333333  */}
-                  {/* <AdSenseBlogMiddleOne /> */}
 
                   {blogPost.contentThree != null && (
                     <div
-                      className="text-justify mx-5 text-black dark:text-slate-100 adsbygoogle`"
+                      className="text-justify mx-5 text-black dark:text-slate-100`"
                       dangerouslySetInnerHTML={{
                         __html: blogPost.contentThree
                       }}
@@ -112,13 +103,10 @@ const Page = async ({ params }) => {
                       Verified By: Admin
                     </p>
                   </div>
-                  {/* <AdSenseBlogMiddleThree /> */}
                 </div>
               </div>
               <div className="p-0 md:w-1/4 hidden md:block">
                 <div className="min-h-screen rounded-lg overflow-hidden">
-                  {/* <AdSenseBlogSideThree /> <br />
-                  <AdSenseBlogSideFour /> <br /> */}
                 </div>
               </div>
             </div>
@@ -126,7 +114,7 @@ const Page = async ({ params }) => {
         </section>
         {/* <div className="flex flex-row min-h-screen justify-center items-center pt-10">
           <div
-            className="text-justify mx-5 w-[100vw] md:w-[50%] text-black dark:text-slate-100 adsbygoogle`"
+            className="text-justify mx-5 w-[100vw] md:w-[50%] text-black dark:text-slate-100`"
             dangerouslySetInnerHTML={{ __html: blogPost.content }}
           />
         </div>
