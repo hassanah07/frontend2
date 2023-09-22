@@ -1,5 +1,6 @@
 import Quicklink from "../components/Quicklink";
 import BlogCombine from "../components/BlogCombine";
+import GoogleAnalytics from "../components/GoogleAnalytics";
 
 export const metadata = {
   title: "Jobs and Career",
@@ -51,8 +52,9 @@ const Page = async ({ searchParams }) => {
         nameTwo={nameTwo}
         nameThree={nameThree}
       />
-      
+
       <BlogCombine blogs={blogs} pageNumbers={pageNumbers} myPage={myPage} />
+      <GoogleAnalytics ga_id={"G-21BCEQYGEG"} />
     </>
   );
 };
