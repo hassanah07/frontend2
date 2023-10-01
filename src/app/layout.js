@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import favicon from "./favicon.ico";
 import Script from "next/script";
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,9 +41,16 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body className={inter.className}>
+        <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+        >
         <Navigation key={key} />
         {children}
         <Ribbon />
+        </ThemeProvider>
       </body>
     </html>
   );
