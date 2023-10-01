@@ -8,6 +8,7 @@ import { nav } from "../api/Nav";
 import { AdminNav } from "../api/AdminNav";
 import { useRouter } from "next/navigation";
 import logo from "../../../public/icon.png";
+import { ModeToggle } from "@/components/ModeToggle";
 
 const Navigation = () => {
   const router = useRouter();
@@ -164,6 +165,9 @@ const Navigation = () => {
           </div>
         </div>
       )}
+      <div className="fixed bottom-2 right-2 z-20 cursor-pointer dark:border-white border-2 border-black rounded-lg">
+        <ModeToggle />
+      </div>
     </>
   );
 };
